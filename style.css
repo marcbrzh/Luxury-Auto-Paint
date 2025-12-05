@@ -2,6 +2,7 @@
 /* === GLOBAL BASE STYLES ================================== */
 /* ========================================================= */
 
+
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body { 
@@ -15,6 +16,7 @@ body.no-scroll { overflow:hidden; }
 
 a { color:inherit; text-decoration:none; }
 img { max-width:100%; display:block; }
+
 
 /* ========================================================= */
 /* === TYPOGRAPHY & ACCENT COLORS ========================= */
@@ -31,6 +33,7 @@ img { max-width:100%; display:block; }
 
 .accent { color:#c7a45b; }
 .accent-text { color:#9b7f42; }
+
 
 /* ========================================================= */
 /* === HEADER & NAVIGATION ================================ */
@@ -216,6 +219,7 @@ nav a.active::after {
   }
 }
 
+
 /* ========================================================= */
 /* === SHARED BUTTONS ====================================== */
 /* ========================================================= */
@@ -237,6 +241,7 @@ nav a.active::after {
   transform:translateY(-2px);
 }
 
+
 /* ========================================================= */
 /* === SHARED FOOTER ======================================= */
 /* ========================================================= */
@@ -256,13 +261,13 @@ footer {
 }
 .footer-link:hover { text-decoration:underline; }
 
+
 /* ========================================================= */
 /* === SHARED CARD ANIMATIONS ============================= */
 /* ========================================================= */
 
 .service-card,
 .realisations-item,
-.avis-item,
 .equipement-card,
 .service-atelier-item,
 .localisation-info,
@@ -276,7 +281,6 @@ footer {
 
 .service-card:hover,
 .realisations-item:hover,
-.avis-item:hover,
 .equipement-card:hover,
 .service-atelier-item:hover,
 .localisation-info:hover,
@@ -288,6 +292,7 @@ footer {
   box-shadow:0 16px 28px rgba(0,0,0,0.5);
   border-color:rgba(199,167,91,0.7);
 }
+
 
 /* ========================================================= */
 /* === INDEX.HTML – HOME PAGE ============================= */
@@ -315,7 +320,7 @@ footer {
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.99));
+  background:linear-gradient(to bottom, rgba(5,6,8,0.75), rgba(5,6,8,0.99));
   z-index:0;
 }
 
@@ -660,474 +665,6 @@ footer {
   margin:0 auto 2rem;
 }
 
-/* ========================================================= */
-/* === ATELIER.HTML PAGE =================================== */
-/* ========================================================= */
-
-.atelier-page { background:#050608; color:#f3f3f3; }
-
-.atelier-page .hero {
-  width:100vw;
-  min-width:100%;
-  min-height:340px;
-  height:80vh;
-  background:url('images/atelier-hero.jpg') center center / cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.atelier-page .hero::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
-  z-index:0;
-}
-
-.atelier-page .hero-content {
-  position:relative;
-  z-index:1;
-  max-width:900px;
-  padding:0 1rem;
-}
-
-.atelier-page .hero-content h1,
-.atelier-page .hero-content p {
-  text-shadow:0 2px 12px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,1);
-}
-
-.atelier-page .hero h1 {
-  font-family:'Playfair Display', serif;
-  font-size:2.1rem;
-  margin-bottom:1rem;
-}
-
-.atelier-page .hero p {
-  font-size:1rem;
-  margin-bottom:1.5rem;
-  color:#e5e5e5;
-}
-
-.atelier-page section {
-  padding:3rem 1.5rem;
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.atelier-page .intro-atelier {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:left;
-}
-
-.atelier-page .intro-atelier h2 {
-  color:#c7a45b;
-  margin-bottom:1rem;
-  font-size:1.7rem;
-  font-family:'Playfair Display', serif;
-}
-
-.atelier-page .intro-atelier .intro-text { max-width:800px; }
-
-.atelier-page .intro-atelier p {
-  color:#d4d4d4;
-  font-size:0.98rem;
-  line-height:1.7;
-}
-
-/* EQUIPEMENTS */
-.atelier-page .equipements h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.9rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-  text-align:center;
-}
-
-.atelier-page .equipements-grid {
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:2rem;
-  margin-top:1rem;
-}
-
-@media (max-width:900px) {
-  .atelier-page .equipements-grid { grid-template-columns:repeat(2, 1fr); }
-}
-@media (max-width:600px) {
-  .atelier-page .equipements-grid { grid-template-columns:1fr; }
-}
-
-.atelier-page .equipement-card {
-  background:#101218;
-  padding:1.5rem 1.2rem;
-  border-radius:12px;
-  box-shadow:0 10px 24px rgba(0,0,0,0.35);
-  border:1px solid rgba(255,255,255,0.04);
-}
-
-.atelier-page .equipement-card img {
-  width:100%;
-  height:170px;
-  border-radius:10px;
-  margin-bottom:0.9rem;
-  object-fit:cover;
-}
-
-.atelier-page .equipement-card h3 {
-  margin-bottom:0.4rem;
-  font-size:1.1rem;
-  font-family:'Playfair Display', serif;
-  color:#f9f4e8;
-}
-
-.atelier-page .equipement-card p {
-  font-size:0.95rem;
-  color:#d5d5d5;
-}
-
-/* SERVICES ATELIER */
-.atelier-page .services-atelier h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.9rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-  text-align:center;
-}
-
-.atelier-page .services-atelier-grid {
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:2rem;
-  margin-top:2rem;
-}
-
-@media (max-width:900px) {
-  .atelier-page .services-atelier-grid { grid-template-columns:1fr; }
-}
-
-.atelier-page .service-atelier-item {
-  background:#0d0f14;
-  padding:2rem 1.5rem;
-  border-radius:12px;
-  box-shadow:0 10px 22px rgba(0,0,0,0.4);
-  border:1px solid rgba(255,255,255,0.04);
-  border-left:4px solid #c7a45b;
-}
-
-.atelier-page .service-atelier-item .service-number {
-  font-family:'Playfair Display', serif;
-  font-size:2rem;
-  color:#c7a45b;
-  margin-bottom:0.5rem;
-  font-weight:600;
-}
-
-.atelier-page .service-atelier-item h3 {
-  font-family:'Playfair Display', serif;
-  color:#f9f4e8;
-  margin-bottom:0.75rem;
-  font-size:1.2rem;
-}
-
-.atelier-page .service-atelier-item p {
-  font-size:0.95rem;
-  color:#d3d3d3;
-}
-
-/* LOCALISATION */
-.atelier-page .localisation h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.9rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-  text-align:center;
-}
-
-.atelier-page .localisation-grid {
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:2rem;
-  margin-top:2rem;
-}
-
-@media (max-width:900px) {
-  .atelier-page .localisation-grid { grid-template-columns:repeat(2, 1fr); }
-}
-@media (max-width:600px) {
-  .atelier-page .localisation-grid { grid-template-columns:1fr; }
-}
-
-.atelier-page .localisation-info {
-  background:#101218;
-  padding:2rem 1.5rem;
-  border-radius:12px;
-  box-shadow:0 10px 22px rgba(0,0,0,0.4);
-  border:1px solid rgba(255,255,255,0.04);
-}
-
-.atelier-page .localisation-info h3 {
-  font-family:'Playfair Display', serif;
-  color:#c7a45b;
-  margin-bottom:0.75rem;
-  font-size:1.1rem;
-}
-
-.atelier-page .localisation-info p {
-  font-size:0.95rem;
-  color:#d3d3d3;
-  line-height:1.8;
-}
-
-/* CTA SECTION */
-.atelier-page .cta-section {
-  background:#0a0b0e;
-  padding:4rem 1.5rem;
-  text-align:center;
-  border-top:1px solid rgba(199,167,91,0.3);
-  border-bottom:1px solid rgba(199,167,91,0.3);
-}
-
-.atelier-page .cta-section h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.8rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-}
-
-.atelier-page .cta-section p {
-  color:#d0d0d0;
-  font-size:0.98rem;
-  margin-bottom:1.5rem;
-}
-
-/* ========================================================= */
-/* === NOS-SERVICES.HTML PAGE ============================= */
-/* ========================================================= */
-
-.services-page { background:#050608; color:#f3f3f3; }
-
-.services-page .hero {
-  width:100vw;
-  min-width:100%;
-  min-height:340px;
-  height:70vh;
-  background:url('images/services-hero.jpg') center center / cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.services-page .hero::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
-  z-index:0;
-}
-
-.services-page .hero-content {
-  position:relative;
-  z-index:1;
-  max-width:900px;
-  padding:0 1rem;
-}
-
-.services-page .hero-content h1,
-.services-page .hero-content p {
-  text-shadow:0 2px 12px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,1);
-}
-
-.services-page .hero h1 {
-  font-family:'Playfair Display', serif;
-  font-size:2.1rem;
-  margin-bottom:1rem;
-}
-
-.services-page .hero p {
-  font-size:1rem;
-  margin-bottom:1.5rem;
-  color:#e5e5e5;
-}
-
-.services-page section {
-  padding:3rem 1.5rem;
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.services-page .intro-services {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:left;
-}
-
-.services-page .intro-services h2 {
-  color:#c7a45b;
-  margin-bottom:1rem;
-  font-size:1.7rem;
-  font-family:'Playfair Display', serif;
-}
-
-.services-page .intro-services .intro-text { max-width:800px; }
-
-.services-page .intro-services p {
-  color:#d4d4d4;
-  font-size:0.98rem;
-  line-height:1.7;
-}
-
-/* SERVICES DETAILS */
-.services-page .services-details h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.9rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-  text-align:center;
-}
-
-.services-page .service-detail-section { margin-bottom:3.5rem; }
-
-.services-page .service-detail-content {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:3rem;
-  align-items:center;
-}
-
-@media (max-width:900px) {
-  .services-page .service-detail-content {
-    grid-template-columns:1fr;
-    gap:2rem;
-  }
-}
-
-.services-page .service-detail-inverted .service-detail-content {
-  direction:rtl;
-}
-
-.services-page .service-detail-inverted .service-detail-text {
-  direction:ltr;
-}
-
-.services-page .service-detail-text h3 {
-  font-family:'Playfair Display', serif;
-  color:#c7a45b;
-  margin-bottom:1rem;
-  font-size:1.4rem;
-}
-
-.services-page .service-detail-text p {
-  color:#d4d4d4;
-  font-size:0.98rem;
-  line-height:1.7;
-  margin-bottom:1.5rem;
-}
-
-.services-page .service-features {
-  list-style:none;
-  padding-left:0;
-}
-
-.services-page .service-features li {
-  position:relative;
-  padding-left:1.8rem;
-  margin-bottom:0.6rem;
-  color:#d5d5d5;
-  font-size:0.95rem;
-}
-
-.services-page .service-features li::before {
-  content:"✓";
-  position:absolute;
-  left:0;
-  color:#c7a45b;
-  font-weight:600;
-}
-
-.services-page .service-detail-content img {
-  border-radius:12px;
-  box-shadow:0 16px 32px rgba(0,0,0,0.4);
-  width:100%;
-}
-
-/* COMPLEMENTARY SERVICES */
-.services-page .services-complementaires h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.9rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-  text-align:center;
-}
-
-.services-page .complementaires-grid {
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:2rem;
-  margin-top:2rem;
-}
-
-@media (max-width:900px) {
-  .services-page .complementaires-grid { grid-template-columns:repeat(2, 1fr); }
-}
-@media (max-width:600px) {
-  .services-page .complementaires-grid { grid-template-columns:1fr; }
-}
-
-.services-page .complementaire-card {
-  background:#101218;
-  padding:2rem 1.5rem;
-  border-radius:12px;
-  box-shadow:0 10px 24px rgba(0,0,0,0.35);
-  border:1px solid rgba(199,167,91,0.3);
-  text-align:center;
-}
-
-.services-page .complementaire-card h3 {
-  font-family:'Playfair Display', serif;
-  color:#c7a45b;
-  margin-bottom:0.75rem;
-  font-size:1.1rem;
-}
-
-.services-page .complementaire-card p {
-  color:#d3d3d3;
-  font-size:0.95rem;
-}
-
-/* CTA SECTION */
-.services-page .cta-section {
-  background:#0a0b0e;
-  padding:4rem 1.5rem;
-  text-align:center;
-  border-top:1px solid rgba(199,167,91,0.3);
-  border-bottom:1px solid rgba(199,167,91,0.3);
-  margin-top:2rem;
-}
-
-.services-page .cta-section h2 {
-  font-family:'Playfair Display', serif;
-  font-size:1.8rem;
-  margin-bottom:0.75rem;
-  color:#f5f5f5;
-}
-
-.services-page .cta-section p {
-  color:#d0d0d0;
-  font-size:0.98rem;
-  margin-bottom:1.5rem;
-}
 
 /* ========================================================= */
 /* === REALISATIONS.HTML PAGE ============================= */
@@ -1154,7 +691,7 @@ footer {
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,0.5));
+  background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(5, 6, 8, 0.8));
   z-index:0;
 }
 
@@ -1459,4 +996,475 @@ footer {
   .realisations-page .hero {
     height:80vh;
   }
+}
+
+
+/* ========================================================= */
+/* === NOS-SERVICES.HTML PAGE ============================= */
+/* ========================================================= */
+
+.services-page { background:#050608; color:#f3f3f3; }
+
+.services-page .hero {
+  width:100vw;
+  min-width:100%;
+  min-height:340px;
+  height:70vh;
+  background:url('images/services-hero.jpg') center center / cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.services-page .hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(5,6,8,0.7), rgba(5,6,8,0.99));
+  z-index:0;
+}
+
+.services-page .hero-content {
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  padding:0 1rem;
+}
+
+.services-page .hero-content h1,
+.services-page .hero-content p {
+  text-shadow:0 2px 12px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,1);
+}
+
+.services-page .hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:2.1rem;
+  margin-bottom:1rem;
+}
+
+.services-page .hero p {
+  font-size:1rem;
+  margin-bottom:1.5rem;
+  color:#e5e5e5;
+}
+
+.services-page section {
+  padding:3rem 1.5rem;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.services-page .intro-services {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:left;
+}
+
+.services-page .intro-services h2 {
+  color:#c7a45b;
+  margin-bottom:1rem;
+  font-size:1.7rem;
+  font-family:'Playfair Display', serif;
+}
+
+.services-page .intro-services .intro-text { max-width:800px; }
+
+.services-page .intro-services p {
+  color:#d4d4d4;
+  font-size:0.98rem;
+  line-height:1.7;
+}
+
+/* SERVICES DETAILS */
+.services-page .services-details h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.9rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+  text-align:center;
+}
+
+.services-page .service-detail-section { margin-bottom:3.5rem; }
+
+.services-page .service-detail-content {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+@media (max-width:900px) {
+  .services-page .service-detail-content {
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+}
+
+.services-page .service-detail-inverted .service-detail-content {
+  direction:rtl;
+}
+
+.services-page .service-detail-inverted .service-detail-text {
+  direction:ltr;
+}
+
+.services-page .service-detail-text h3 {
+  font-family:'Playfair Display', serif;
+  color:#c7a45b;
+  margin-bottom:1rem;
+  font-size:1.4rem;
+}
+
+.services-page .service-detail-text p {
+  color:#d4d4d4;
+  font-size:0.98rem;
+  line-height:1.7;
+  margin-bottom:1.5rem;
+}
+
+.services-page .service-features {
+  list-style:none;
+  padding-left:0;
+}
+
+.services-page .service-features li {
+  position:relative;
+  padding-left:1.8rem;
+  margin-bottom:0.6rem;
+  color:#d5d5d5;
+  font-size:0.95rem;
+}
+
+.services-page .service-features li::before {
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#c7a45b;
+  font-weight:600;
+}
+
+.services-page .service-detail-content img {
+  border-radius:12px;
+  box-shadow:0 16px 32px rgba(0,0,0,0.4);
+  width:100%;
+}
+
+/* COMPLEMENTARY SERVICES */
+.services-page .services-complementaires h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.9rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+  text-align:center;
+}
+
+.services-page .complementaires-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:2rem;
+  margin-top:2rem;
+}
+
+@media (max-width:900px) {
+  .services-page .complementaires-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:600px) {
+  .services-page .complementaires-grid { grid-template-columns:1fr; }
+}
+
+.services-page .complementaire-card {
+  background:#101218;
+  padding:2rem 1.5rem;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.35);
+  border:1px solid rgba(199,167,91,0.3);
+  text-align:center;
+}
+
+.services-page .complementaire-card h3 {
+  font-family:'Playfair Display', serif;
+  color:#c7a45b;
+  margin-bottom:0.75rem;
+  font-size:1.1rem;
+}
+
+.services-page .complementaire-card p {
+  color:#d3d3d3;
+  font-size:0.95rem;
+}
+
+/* CTA SECTION */
+.services-page .cta-section {
+  background:#0a0b0e;
+  padding:4rem 1.5rem;
+  text-align:center;
+  border-top:1px solid rgba(199,167,91,0.3);
+  border-bottom:1px solid rgba(199,167,91,0.3);
+  margin-top:2rem;
+}
+
+.services-page .cta-section h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+}
+
+.services-page .cta-section p {
+  color:#d0d0d0;
+  font-size:0.98rem;
+  margin-bottom:1.5rem;
+}
+
+
+/* ========================================================= */
+/* === ATELIER.HTML PAGE =================================== */
+/* ========================================================= */
+
+.atelier-page { background:#050608; color:#f3f3f3; }
+
+.atelier-page .hero {
+  width:100vw;
+  min-width:100%;
+  min-height:340px;
+  height:80vh;
+  background:url('images/atelier-hero.jpg') center center / cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.atelier-page .hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+  z-index:0;
+}
+
+.atelier-page .hero-content {
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  padding:0 1rem;
+}
+
+.atelier-page .hero-content h1,
+.atelier-page .hero-content p {
+  text-shadow:0 2px 12px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,1);
+}
+
+.atelier-page .hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:2.1rem;
+  margin-bottom:1rem;
+}
+
+.atelier-page .hero p {
+  font-size:1rem;
+  margin-bottom:1.5rem;
+  color:#e5e5e5;
+}
+
+.atelier-page section {
+  padding:3rem 1.5rem;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.atelier-page .intro-atelier {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:left;
+}
+
+.atelier-page .intro-atelier h2 {
+  color:#c7a45b;
+  margin-bottom:1rem;
+  font-size:1.7rem;
+  font-family:'Playfair Display', serif;
+}
+
+.atelier-page .intro-atelier .intro-text { max-width:800px; }
+
+.atelier-page .intro-atelier p {
+  color:#d4d4d4;
+  font-size:0.98rem;
+  line-height:1.7;
+}
+
+/* EQUIPEMENTS */
+.atelier-page .equipements h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.9rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+  text-align:center;
+}
+
+.atelier-page .equipements-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:2rem;
+  margin-top:1rem;
+}
+
+@media (max-width:900px) {
+  .atelier-page .equipements-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:600px) {
+  .atelier-page .equipements-grid { grid-template-columns:1fr; }
+}
+
+.atelier-page .equipement-card {
+  background:#101218;
+  padding:1.5rem 1.2rem;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.atelier-page .equipement-card img {
+  width:100%;
+  height:170px;
+  border-radius:10px;
+  margin-bottom:0.9rem;
+  object-fit:cover;
+}
+
+.atelier-page .equipement-card h3 {
+  margin-bottom:0.4rem;
+  font-size:1.1rem;
+  font-family:'Playfair Display', serif;
+  color:#f9f4e8;
+}
+
+.atelier-page .equipement-card p {
+  font-size:0.95rem;
+  color:#d5d5d5;
+}
+
+/* SERVICES ATELIER */
+.atelier-page .services-atelier h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.9rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+  text-align:center;
+}
+
+.atelier-page .services-atelier-grid {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:2rem;
+  margin-top:2rem;
+}
+
+@media (max-width:900px) {
+  .atelier-page .services-atelier-grid { grid-template-columns:1fr; }
+}
+
+.atelier-page .service-atelier-item {
+  background:#0d0f14;
+  padding:2rem 1.5rem;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.04);
+  border-left:4px solid #c7a45b;
+}
+
+.atelier-page .service-atelier-item .service-number {
+  font-family:'Playfair Display', serif;
+  font-size:2rem;
+  color:#c7a45b;
+  margin-bottom:0.5rem;
+  font-weight:600;
+}
+
+.atelier-page .service-atelier-item h3 {
+  font-family:'Playfair Display', serif;
+  color:#f9f4e8;
+  margin-bottom:0.75rem;
+  font-size:1.2rem;
+}
+
+.atelier-page .service-atelier-item p {
+  font-size:0.95rem;
+  color:#d3d3d3;
+}
+
+/* LOCALISATION */
+.atelier-page .localisation h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.9rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+  text-align:center;
+}
+
+.atelier-page .localisation-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:2rem;
+  margin-top:2rem;
+}
+
+@media (max-width:900px) {
+  .atelier-page .localisation-grid { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:600px) {
+  .atelier-page .localisation-grid { grid-template-columns:1fr; }
+}
+
+.atelier-page .localisation-info {
+  background:#101218;
+  padding:2rem 1.5rem;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.atelier-page .localisation-info h3 {
+  font-family:'Playfair Display', serif;
+  color:#c7a45b;
+  margin-bottom:0.75rem;
+  font-size:1.1rem;
+}
+
+.atelier-page .localisation-info p {
+  font-size:0.95rem;
+  color:#d3d3d3;
+  line-height:1.8;
+}
+
+/* CTA SECTION */
+.atelier-page .cta-section {
+  background:#0a0b0e;
+  padding:4rem 1.5rem;
+  text-align:center;
+  border-top:1px solid rgba(199,167,91,0.3);
+  border-bottom:1px solid rgba(199,167,91,0.3);
+}
+
+.atelier-page .cta-section h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  margin-bottom:0.75rem;
+  color:#f5f5f5;
+}
+
+.atelier-page .cta-section p {
+  color:#d0d0d0;
+  font-size:0.98rem;
+  margin-bottom:1.5rem;
 }
