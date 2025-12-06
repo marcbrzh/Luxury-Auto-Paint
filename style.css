@@ -26,7 +26,7 @@ img { max-width:100%; display:block; }
   height:100%;
   font-family:'Playfair Display', serif;
   color:#fff;
-  font-size:1rem;
+  font-size:1.1rem;
 }
 
 .accent { color:#c7a45b; }
@@ -81,8 +81,8 @@ header > * {
   display:flex;
   align-items:center;
   justify-content:center;
-  width:24px;
-  height:24px;
+  width:20px;
+  height:20px;
   padding:8px;
   margin:-8px;
   cursor:pointer;
@@ -90,6 +90,7 @@ header > * {
   z-index:30;
   transition:transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .hamburger span,
 .hamburger span::before,
@@ -446,14 +447,14 @@ footer {
 }
 
 .index-page .hero p {
-  font-size:1rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   color:#e5e5e5;
 }
 
 @media (min-width:600px) {
   .index-page .hero h1 { font-size:2.4rem; }
-  .index-page .hero p { font-size:1.05rem; }
+  .index-page .hero p { font-size:1rem; }
 }
 
 @media (min-width:900px) {
@@ -496,7 +497,7 @@ footer {
 
 .index-page .atelier p {
   color:#d4d4d4;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   letter-spacing:0.2px;
   margin-bottom:1rem;
@@ -688,58 +689,6 @@ footer {
 
 .index-page .realisations-cta { margin-top:3.5rem; }
 
-/* AVIS SECTION */
-.index-page .avis {
-  background:#050608;
-  padding:4.5rem 1.5rem;
-  text-align:center;
-}
-
-.index-page .avis h2 {
-  font-family:'Playfair Display', serif;
-  color:#f5f5f5;
-  font-size:1.9rem;
-  margin-bottom:3rem;
-}
-
-.index-page .avis-grid {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:2rem;
-  max-width:900px;
-  margin:0 auto;
-}
-
-@media (min-width:900px) {
-  .index-page .avis-grid { 
-    grid-template-columns:repeat(3, 1fr);
-    gap:2.25rem;
-  }
-}
-
-.index-page .avis-item {
-  background:#101218;
-  padding:2rem;
-  border-radius:12px;
-  box-shadow:0 10px 24px rgba(0,0,0,0.4);
-  border:1px solid rgba(255,255,255,0.04);
-}
-
-.index-page .avis-item p {
-  color:#e0e0e0;
-  font-size:0.96rem;
-  line-height:1.8;
-  margin-bottom:1.5rem;
-  font-style:italic;
-}
-
-.index-page .avis-item span {
-  display:block;
-  font-weight:600;
-  color:#c7a45b;
-  font-size:0.9rem;
-  text-align:right;
-}
 
 /* CONTACT SECTION */
 .index-page .contact { text-align:center; }
@@ -747,7 +696,7 @@ footer {
 .index-page .contact h2 {
   font-family:'Playfair Display', serif;
   font-size:1.9rem;
-  margin-bottom:1rem;
+  margin-bottom:0rem;
   color:#f5f5f5;
 }
 
@@ -799,7 +748,7 @@ footer {
 /* FIND US / MAP */
 .index-page .find-us {
   text-align:center;
-  padding:4.5rem 1.5rem;
+  padding:4.5rem 0rem;
 }
 
 .index-page .find-us h2 {
@@ -811,7 +760,7 @@ footer {
 
 .index-page .find-us p {
   color:#d6d6d6;
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   margin-bottom:2.5rem;
   line-height:1.7;
 }
@@ -872,7 +821,7 @@ footer {
 }
 
 .realisations-page .hero p {
-  font-size:1rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   color:#e5e5e5;
 }
@@ -901,7 +850,7 @@ footer {
 
 .realisations-page .intro-realisations p {
   color:#d4d4d4;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   margin-bottom:1rem;
 }
@@ -969,7 +918,7 @@ footer {
 }
 
 .realisations-page .avant-apres-item p {
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   color:#d3d3d3;
   line-height:1.6;
   margin-bottom:0.75rem;
@@ -1073,7 +1022,7 @@ footer {
 
 .realisations-page .etude-content p {
   color:#d4d4d4;
-  font-size:0.96rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   margin-bottom:1.25rem;
 }
@@ -1179,7 +1128,7 @@ footer {
 
 .realisations-page .cta-section p {
   color:#d0d0d0;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   line-height:1.7;
   max-width:700px;
@@ -1235,7 +1184,7 @@ footer {
 }
 
 .services-page .hero p {
-  font-size:1rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   color:#e5e5e5;
 }
@@ -1264,7 +1213,7 @@ footer {
 
 .services-page .intro-services p {
   color:#d4d4d4;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   margin-bottom:1rem;
 }
@@ -1335,7 +1284,7 @@ footer {
 
 .services-page .service-detail-text p {
   color:#d4d4d4;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   margin-bottom:1.5rem;
 }
@@ -1436,7 +1385,7 @@ footer {
 
 .services-page .complementaire-card p {
   color:#d3d3d3;
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   line-height:1.6;
 }
 
@@ -1459,7 +1408,7 @@ footer {
 
 .services-page .cta-section p {
   color:#d0d0d0;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   line-height:1.7;
   max-width:700px;
@@ -1515,7 +1464,7 @@ footer {
 }
 
 .atelier-page .hero p {
-  font-size:1rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   color:#e5e5e5;
 }
@@ -1544,7 +1493,7 @@ footer {
 
 .atelier-page .intro-atelier p {
   color:#d4d4d4;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   line-height:1.8;
   margin-bottom:1rem;
 }
@@ -1612,7 +1561,7 @@ footer {
 }
 
 .atelier-page .equipement-card p {
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   color:#d5d5d5;
   line-height:1.6;
 }
@@ -1671,7 +1620,7 @@ footer {
 }
 
 .atelier-page .service-atelier-item p {
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   color:#d3d3d3;
   line-height:1.7;
 }
@@ -1727,7 +1676,7 @@ footer {
 }
 
 .atelier-page .localisation-info p {
-  font-size:0.95rem;
+  font-size:0.95rem !important;
   color:#d3d3d3;
   line-height:1.8;
 }
@@ -1751,7 +1700,7 @@ footer {
 
 .atelier-page .cta-section p {
   color:#d0d0d0;
-  font-size:0.98rem;
+  font-size:0.95rem !important;
   margin-bottom:2rem;
   line-height:1.7;
   max-width:700px;
@@ -1770,7 +1719,7 @@ footer {
   .atelier-page .hero p,
   .services-page .hero p,
   .realisations-page .hero p {
-    font-size:1.05rem;
+    font-size:1rem;
   }
 }
 
